@@ -1,0 +1,29 @@
+#!bin/bash
+
+apt update
+cd /home/ubuntu
+git clone https://github.com/udiscopotato/crudapp.git
+cd crudapp
+
+apt install mysql-server -y
+apt install nodejs -y
+apt install npm -y
+npm install
+
+cp /home/ubuntu/crudapp/crud.service /etc/systemd/system/crud.service
+
+systemctl start crud.service
+systemctl enable crud.service
+
+
+
+
+
+
+
+
+
+
+
+
+#run this startup script on aws which is present on user-data far bellow
