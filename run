@@ -2,6 +2,8 @@
 
 apt update
 
+apt install mysql-server
+systemctl start mysql.service
 apt install nodejs -y
 apt install npm -y
 npm install
