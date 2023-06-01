@@ -1,0 +1,12 @@
+[Unit]
+Description=index.js-custom_service to keep it running
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/usr/bin/node /home/ubuntu/crudapp/src/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

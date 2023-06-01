@@ -1,0 +1,12 @@
+#!/bin/bash
+
+apt update
+
+apt install nodejs -y
+apt instlall npm -y
+npm install
+
+cp /home/ubuntu/crudapp/crud.service /etc/systemd/system/crud.service
+
+systemctl start crud.service
+systemctl enable crud.service
