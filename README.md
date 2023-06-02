@@ -36,7 +36,10 @@ export const pool = createPool({
   database: "customersdb",
 });
 ```
-
+you also need to clone this repo to your local system so that you can see the files present in "png_files", github doesn't preview these files
+```javascript
+git clone https://github.com/udiscopotato/crudapp.git
+```
 ## Steps
 
 Let's create 3 security groups first
@@ -107,7 +110,8 @@ https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-
 https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/setting-up-route-53.html
 
 for further assistance you can refer files present in (png_files)
-
+## help
+if you stuck somewhere you can refer to the files present in "png_files" folder, or you can msg me via linkedin
 ## Authors
   for further help you can connect me from my linkedin
 - [@subhamjena](https://www.linkedin.com/in/subham-jena-267a43169/)
