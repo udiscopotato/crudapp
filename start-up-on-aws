@@ -2,7 +2,7 @@
 
 apt update
 cd /home/ubuntu
-git clone https://github.com/udiscopotato/crudapp.git
+git clone [YOUR FORKED GIT REPO LINK]
 cd crudapp
 
 apt install mysql-server -y
