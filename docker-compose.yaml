@@ -1,16 +1,22 @@
 services:
   node:
     container_name: crud_app
-    restart: always
+    restart: unless-stopped
     build: .
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=bapun123
     depends_on:
       - mysql
     ports:
       - "3000:3000"
+    networks:
+      - nodejs-mysql-network
     
   mysql:
     container_name: mysql_backend
-    restart: always
+    restart: unless-stopped
     build: ./database
     ports:
       - "3306:3306"
@@ -18,6 +24,9 @@ services:
       MYSQL_ROOT_PASSWORD: 'bapun123'
     volumes:
       - my-datavolume:/var/lib/mysql
+    networks:
+      - nodejs-mysql-network
+
 volumes:
   my-datavolume:
 networks:
